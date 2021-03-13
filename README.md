@@ -1,4 +1,4 @@
-<img src = "https://raw.githubusercontent.com/jenineharris/odds.n.ends/master/odds.n.endssticker.png" align = "right">
+<img src = "https://raw.githubusercontent.com/jenineharris/stuff/master/bookhex.png" align = "right">
 
 # Academic Hive 2021 Research Bootcamp
 
