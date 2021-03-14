@@ -17,6 +17,7 @@ The work in this workshop is designed to take you about 3 hours to complete from
   <li> Creating basic tables and figures in R 
 </ul>
 
+
 ### Part 1: Installing R and R Studio
 
 ### Part 2: Learning about the features of R Studio 
@@ -24,5 +25,7 @@ The work in this workshop is designed to take you about 3 hours to complete from
 ### Part 3: Importing and cleaning data in R
 
 ### Part 4: Creating basic tables and figures in R
+
+### R Resources
 
 
