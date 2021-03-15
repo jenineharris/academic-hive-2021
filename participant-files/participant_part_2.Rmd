@@ -1,0 +1,424 @@
+---
+title: "Introduction to R"
+subtitle: "Create Basic Tables and Figures in R"
+output: html_output
+---
+
+
+## How to follow along and participate
+
+```{r chunk1}
+library(package = "here")
+library(package = "tidyverse")
+library(package = "foreign")
+library(package = "table1")
+```
+
+
+## Importing data into R
+
+* Before running this code, make sure the participant file and the data file are saved in the same folder on your computer
+
+```{r chunk2}
+# use here so that R looks in the same folder you are in
+here()
+
+# use read_spss function to read the spss file 
+globalData2019 <- read_spss(file = "Pew Research Center Global Attitudes Spring 2019 Dataset WEB.sav")
+```
+
+
+
+## Data cleaning (see prior video)
+
+```{r chunk3}
+globalData2019clean <- globalData2019 %>%
+  filter(country == 21) %>% 
+  select(SEX, AGE, BETTER_GENDER, LADDER_NOW, COUNTRY_SATIS, 
+         ECON_SIT, BELIEVE_GOD, GLOBAL_COMMUNITY) %>% 
+  zap_labels() %>% 
+  mutate(SEX = recode_factor(SEX,
+                             '1' = 'Male',
+                             '2' = 'Female')) %>% 
+  mutate(BETTER_GENDER = recode_factor(BETTER_GENDER,
+                                    '1' = 'Men',
+                                    '2' = 'Women',
+                                    '3' = 'Same/both equally',
+                                    '8' = NA_character_,
+                                    '9' = NA_character_)) %>% 
+  mutate(COUNTRY_SATIS = recode_factor(COUNTRY_SATIS,
+                                       '1' = 'Satisfied',
+                                       '2' = 'Dissatisfied',
+                                       '8' = NA_character_,
+                                       '9' = NA_character_)) %>% 
+  mutate(ECON_SIT = recode_factor(ECON_SIT,
+                                  '1' = 'Very good',
+                                  '2' = 'Somewhat good',
+                                  '3' = 'Somewhat bad',
+                                  '4' = 'Very bad',
+                                  '8' = NA_character_,
+                                  '9' = NA_character_)) %>% 
+  mutate(BELIEVE_GOD = recode_factor(BELIEVE_GOD,
+                                     '1' = 'It is not necessary to believe in God in order to be moral and have good values',
+                                     '2' = 'It is necessary to believe in God in order to be moral and have good values',
+                                     '8' = NA_character_,
+                                     '9' = NA_character_)) %>% 
+  mutate(GLOBAL_COMMUNITY = recode_factor(GLOBAL_COMMUNITY,
+                                          '1' = 'Part of a global community that works together to solve problems',
+                                          '2' = 'Independent nations that compete with other countries and pursue their own interests',
+                                          '3' = 'Both',
+                                          '4' = 'Neither',
+                                          '8' = NA_character_,
+                                          '9' = NA_character_)) 
+```
+
+
+## Check your work
+
+```{r chunk4}
+summary(object = globalData2019clean)
+```
+
+
+## Basic table
+
+
+```{r chunk5}
+table1(~ SEX + AGE + BETTER_GENDER,
+       data = globalData2019clean)
+```
+
+
+## Basic table with labels
+
+* Add labels for the variables and add the `BELIEVE_GOD` variable
+
+```{r chunk6}
+label(globalData2019clean$SEX) <- "Sex"
+label(globalData2019clean$AGE) <- "Age (years)" 
+label(globalData2019clean$BETTER_GENDER) <- "Who has a better life in this country"
+label(globalData2019clean$BELIEVE_GOD) <- "Which comes closest to your opinion"
+```
+
+
+## Basic table with labels
+
+```{r chunk7}
+table1(~ SEX + AGE + BETTER_GENDER + BELIEVE_GOD,
+       data = globalData2019clean)
+```
+
+
+## Basic table with labels and grouped by sex
+
+```{r chunk8}
+table1(~ AGE + BETTER_GENDER + BELIEVE_GOD | SEX,
+       data = globalData2019clean)
+```
+
+## Basic table with labels, groups, and total
+
+```{r chunk9}
+table1(~ AGE + BETTER_GENDER + BELIEVE_GOD | SEX,
+       data = globalData2019clean, overall = "Total")
+```
+
+
+## You Try It!
+
+* Copy and paste the label and table code from above into the empty R chunk
+
+* Add labels to the `COUNTRY_SATIS` and `ECON_SIT` variables (check the codebook to find these)
+
+* Add the `COUNTRY_SATIS` and `ECON_SIT` variables to the table 
+
+* Run the code to make sure it works
+
+```{r chunk10}
+
+```
+
+
+## Using the ggplot2 package for plotting
+
+* Part of the `tidyverse` set of packages in R
+
+* `gg` stands for **grammar** of **graphics**
+
+* Plots created in `ggplot2` are built in layers 
+
+* Let's look at some examples
+
+* First, a bar chart...
+
+## Basic bar chart
+
+```{r chunk11}
+globalData2019clean %>%
+  ggplot(aes(x = SEX)) +
+  geom_bar() 
+```
+
+## Fancy bar chart
+
+```{r chunk12}
+globalData2019clean %>%
+  ggplot(aes(x = SEX)) +
+  geom_bar(fill = "deeppink") +
+  labs(x = "Sex",
+       y = "Frequency",
+       title = "Sex of 995 participants in a 2019 survey of people in Nigeria.") +
+  theme_minimal()
+```
+
+## Fancy bar chart with colors
+
+```{r chunk13}
+globalData2019clean %>%
+  ggplot(aes(x = SEX, fill = SEX)) +
+  geom_bar() +
+  labs(x = "Sex",
+       y = "Frequency",
+       title = "Sex of 995 participants in a 2019 survey of people in Nigeria.") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal()
+```
+
+## Fancy bar chart without legend
+
+```{r chunk14}
+globalData2019clean %>%
+  ggplot(aes(x = SEX, fill = SEX)) +
+  geom_bar() +
+  labs(x = "Sex",
+       y = "Frequency",
+       title = "Sex of 995 participants in a 2019 survey of people in Nigeria.") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal() +
+  theme(legend.position = "none") 
+```
+
+
+## You try it!
+
+Make a bar chart of the `BETTER_GENDER` responses from survey participants with the Figure 1 code in your R Markdown file ().
+
+Edit the code to: 
+
+* Use `BETTER_GENDER` as the fill variable in the `ggplot()` layer
+
+* Change the color of the bars by replacing "Set2" with the name of another palette found on the <a href = "https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/">https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/</a> website
+
+* Add labels for the axes and a title inside the quote marks (see codebook for more about the question)
+
+* Replace `theme_minimal()` with another theme, you can find them here: https://ggplot2.tidyverse.org/reference/ggtheme.html
+
+When you have completed the changes, click the little green arrow on the top right of the code chunk to run the code.
+
+## Figure 1 code 
+
+```{r chunk15}
+# Fill in the Figure 1 code
+globalData2019clean %>%
+  ggplot(aes(x = BETTER_GENDER, fill = )) +
+  geom_bar() +
+  labs(x = "",
+       y = "",
+       title = "") +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+
+## Stacked bar plot
+
+```{r chunk16}
+globalData2019clean %>% 
+  drop_na(BETTER_GENDER) %>% 
+  ggplot(aes(x = BETTER_GENDER, fill = SEX)) +
+  geom_bar() +
+  labs(x = "Who has better life",
+       y = "Frequency",
+       title = "Who has a better life by sex according to 995 survey participants in Nigeria in 2019.") +
+  scale_fill_brewer(palette = "BuPu") +
+  theme_minimal() 
+```
+
+## Grouped bar plot
+
+```{r chunk17}
+# Fill in the Figure 1 code
+globalData2019clean %>% 
+  drop_na(BETTER_GENDER) %>% 
+  ggplot(aes(x = BETTER_GENDER, fill = SEX)) +
+  geom_bar(position = "dodge") +
+  labs(x = "Who has better life",
+       y = "Frequency",
+       title = "Who has a better life by sex according to 995 survey participants in Nigeria in 2019.") +
+  scale_fill_brewer(palette = "BuPu", name = "Survey participant sex") +
+  theme_minimal() 
+```
+
+
+## You Try It!
+
+* Create a grouped bar plot for Figure 2 with `BELIEVE_GOD` as the x-axis and `SEX` as the fill color 
+
+* Drop the `NA` values for `BELIEVE_GOD`
+
+* Add good labels for the x-axis, y-axis, title (may need the codebook for this)
+
+* Format it using a palette you like  
+
+* Fix the legend title so it is "Participant sex"
+
+```{r chunk18}
+# Figure 2 code goes here
+
+```
+
+
+## Answer to You Try It!
+
+```{r chunk19}
+# Figure 2 code goes here
+globalData2019clean %>% 
+  drop_na(BELIEVE_GOD) %>% 
+  ggplot(aes(x = BELIEVE_GOD, fill = SEX)) +
+  geom_bar(position = "dodge") +
+  labs(x = "Which is closest to your opinion",
+       y = "Frequency",
+       title = "Belief in God by sex according to 995 survey participants in Nigeria in 2019.") +
+  scale_fill_brewer(palette = "BuPu", name = "Survey participant sex") +
+  theme_minimal() 
+
+```
+
+## Shorten long labels
+
+```{r chunk20}
+# Figure 2 code goes here
+globalData2019clean %>% 
+  drop_na(BELIEVE_GOD) %>% 
+  ggplot(aes(x = BELIEVE_GOD, fill = SEX)) +
+  geom_bar(position = "dodge") +
+  labs(x = "Which is closest to your opinion",
+       y = "Frequency",
+       title = "Belief in God by sex according to 995 survey participants in Nigeria in 2019.") +
+  scale_fill_brewer(palette = "BuPu", name = "Survey participant sex") +
+  theme_minimal() +
+  scale_x_discrete(labels = 
+                     function(x) 
+                       str_wrap(x, width = 30))
+```
+
+
+## Group percentages
+
+```{r chunk21}
+globalData2019clean %>% 
+  group_by(BELIEVE_GOD, SEX) %>% 
+  count() %>% 
+  group_by(BELIEVE_GOD) %>% 
+  mutate(perc = 100 * (n / sum(n))) 
+```
+
+## Grouped bar plot
+
+```{r chunk22}
+globalData2019clean %>% 
+  group_by(BELIEVE_GOD, SEX) %>% 
+  count() %>% 
+  group_by(BELIEVE_GOD) %>% 
+  mutate(perc = 100 * (n / sum(n))) %>% 
+  drop_na(BELIEVE_GOD) %>% 
+  ggplot(aes(x = BELIEVE_GOD, y = perc, fill = SEX)) +
+  geom_col(position = "dodge") +
+  labs(x = "Which captures your beliefs",
+       y = "Percentage of belief group",
+       title = "Belief in God by sex according to 995 survey participants in Nigeria in 2019.") +
+  scale_fill_brewer(palette = "Paired", name = "Survey participant sex") +
+  theme_minimal() +
+  scale_x_discrete(labels = 
+                     function(x) 
+                       str_wrap(x, width = 30))
+```
+
+## Histogram
+
+```{r chunk23}
+# Histogram for age
+globalData2019clean %>% 
+  ggplot(aes(x = AGE)) +
+  geom_histogram() 
+```
+
+## Fancy histogram
+
+```{r chunk24}
+# Histogram for age
+globalData2019clean %>% 
+  ggplot(aes(x = AGE, fill = SEX)) +
+  geom_histogram(color = "white") +
+  labs(x = "Participant age (years)",
+       y = "Frequency",
+       title = "Age distribution by sex for 995 survey participants in Nigeria in 2019.") +
+  scale_fill_brewer(palette = "Set1") +
+  facet_grid(rows = vars(SEX)) +
+  theme_minimal() 
+```
+
+## Box plot
+
+```{r chunk25}
+# Fill in the Figure 1 code
+globalData2019clean %>% 
+  ggplot(aes(x = SEX, y = AGE)) +
+  geom_boxplot() +
+  labs(x = "Participant sex",
+       y = "Age",
+       title = "Age by sex for 995 survey participants in Nigeria in 2019.") +
+  theme_minimal() 
+```
+
+## Fancier box plot
+
+```{r chunk26}
+
+globalData2019clean %>% 
+  ggplot(aes(x = SEX, y = AGE, color = SEX)) +
+  geom_violin() +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(x = "Participant sex",
+       y = "Age",
+       title = "Age by sex for 995 survey participants in Nigeria in 2019.") +
+  theme_minimal() 
+```
+
+## Fancier box plot
+
+```{r chunk27}
+globalData2019clean %>% 
+  ggplot(aes(x = SEX, y = AGE, color = SEX)) +
+  geom_violin() +
+  geom_boxplot(width = .4) +
+  geom_jitter(alpha = .3) +
+  labs(x = "Participant sex",
+       y = "Age",
+       title = "Age by sex for 995 survey participants in Nigeria in 2019.") +
+  scale_color_brewer(palette = "Dark2") +
+  theme_minimal() +
+  coord_flip()
+```
+
+
+
+## The end
+
+* Email me at: harrisj@wustl.edu
+
+* Connect with me on Twitter: https://twitter.com/jenineharris
+
+
