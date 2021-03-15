@@ -44,9 +44,11 @@ Second, download and install R Studio:
 
 ### Part 2: Learn about the features of R Studio 
 
-
+Watch a short introduction to the <a href = "https://youtu.be/G3mnVRPaUKE">R Studio Interface</a>.
 
 ### Part 3: Import and clean data in R
+
+
 
 ### Part 4: Create basic tables and figures in R
 
