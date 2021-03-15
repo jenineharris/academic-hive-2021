@@ -8,7 +8,7 @@ R is a statistical software that is <a href = "https://www.r-project.org">free, 
 
 R can do everything that paid statistical software like SPSS and SAS can do, and often more! <a href = "http://r4stats.com/2019/05/28/data-science-jobs-report-2019-python-way-up-tensorflow-growing-rapidly-r-use-double-sas/">Analysis of data on job openings and other metrics</a> shows that R is increasingly included as a desired or required skill, often surpassing traditional closed source software like SPSS and SAS. R is particularly great for **data management** and developing amazing **data visualizations**. This workshop is designed to get you started using R. 
 
-The work in this workshop is designed to take you about 3 hours to complete from start to finish. The length of the workshop will vary somewhat depending on the speed of your internet connection and your computer experience and comfort level. The activities are divided into 4 parts:
+The work in this workshop is designed to take you about **3 hours** to complete from start to finish. The length of the workshop will vary somewhat depending on the speed of your internet connection and your computer experience and comfort level. The activities are divided into 4 parts:
 
 <ul>
   <li> Installing R and R Studio
