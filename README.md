@@ -25,7 +25,7 @@ R is the software and R Studio is the IDE (Interactive Development Environment) 
 First, download and install R:
 
 <ul>
-  <li> Click the **download R** link on the <a href = "https://www.r-project.org">R Project for Statistical Computing</a> website
+  <li> Click the <b>download R</b> link on the <a href = "https://www.r-project.org">R Project for Statistical Computing</a> website
   <li> Choose one of the options from the <a href = "https://cran.r-project.org/mirrors.html">CRAN Mirrors</a> list (it doesn't matter which one!)
   <li> Click on the download that is appopropriate for your operating system, Linux, Mac, or Windows; if you are not given this option, go back to the CRAN Mirrors and try a different one
   <li> Find the link for <b>install R for the first time</b> and click on it
