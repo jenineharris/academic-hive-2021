@@ -56,7 +56,7 @@ First, download the participant files and save them together in the same folder 
   <li> Unzip the downloaded zip file and save all the files in the folder in a single folder on your computer 
 </ul>
 
-Second, watch and follow along with this video:
+Second, watch and follow along with this video: https://youtu.be/iTY49RJUhXw
 
 If you would like to view the slides separately, they are available here: 
 
