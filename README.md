@@ -58,7 +58,7 @@ First, download the participant files and save them together in the same folder 
 
 Second, watch and follow along with this video: https://youtu.be/iTY49RJUhXw
 
-If you would like to view the slides separately, they are available here: 
+If you would like to view the slides separately, they are available here: https://jenineharris.github.io/AHslides/
 
 ### Part 4: Create basic tables and figures in R
 
