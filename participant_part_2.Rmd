@@ -10,7 +10,7 @@ output: html_output
 ```{r chunk1}
 library(package = "here")
 library(package = "tidyverse")
-library(package = "foreign")
+library(package = "haven")
 library(package = "table1")
 ```
 
