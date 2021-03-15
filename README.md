@@ -48,10 +48,30 @@ Watch a short introduction to the <a href = "https://youtu.be/G3mnVRPaUKE">R Stu
 
 ### Part 3: Import and clean data in R
 
+First, download the participant files and save them together in the same folder on your computer:
 
+<ul>
+  <li> Click on the green <b>Code...</b> button toward the top of this GitHub page 
+  <li> Choose Download Zip
+  <li> Unzip the downloaded zip file and save all the contents in the same folder on your computer 
+</ul>
+
+Second, watch and follow along with this video:
+
+If you would like to view the slides separately, they are available here: 
 
 ### Part 4: Create basic tables and figures in R
 
+Watch and follow along with this video:
+
+If you would like to view the slides separately, they are available here: 
+
 ### R Resources
 
+Other places to get more instruction or information on R:
 
+<ul>
+  <li>  
+  <li> 
+  <li>  
+</ul>
