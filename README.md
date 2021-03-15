@@ -53,7 +53,7 @@ First, download the participant files and save them together in the same folder 
 <ul>
   <li> Click on the green <b>Code</b> button toward the top of this GitHub page 
   <li> Choose Download ZIP
-  <li> Unzip the downloaded zip file and save all the files in the folder in a single folder on your computer 
+  <li> Unzip the downloaded zip file and save all the files in a single folder on your computer 
 </ul>
 
 Second, watch and follow along with this video: https://youtu.be/iTY49RJUhXw
