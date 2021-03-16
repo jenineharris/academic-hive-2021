@@ -62,7 +62,7 @@ If you would like to view the slides separately, they are available here: https:
 
 ### Part 4: Create basic tables and figures in R
 
-Watch and follow along with this video:
+Watch and follow along with this video: https://youtu.be/TADNOby3Eo4
 
 If you would like to view the slides separately, they are available here: 
 
