@@ -1,7 +1,7 @@
-<img src = "https://academichive.com/wp-content/uploads/2017/01/HIVE-001-300x142.png" align = "right"> 
+<img src = "https://academichive.com/wp-content/uploads/2017/01/HIVE-001-300x142.png" align = "left"> 
 
 # 2021 Research Bootcamp
-
+<br><br>
 ### Getting Started in R Workshop Instructions
 
 R is a statistical software that is <a href = "https://www.r-project.org">free, open-source, and can run on most operating systems</a>. This means that anyone in the world with access to a computer and the internet can use it and anyone in the world can contribute to the development of new tools in R. 
