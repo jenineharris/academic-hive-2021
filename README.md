@@ -1,4 +1,4 @@
-<img src = "https://raw.githubusercontent.com/jenineharris/stuff/master/bookhex.png" align = "right">
+<img src = "https://academichive.com/wp-content/uploads/2017/01/HIVE-001-300x142.png" align = "right">
 
 # Academic Hive 2021 Research Bootcamp
 
