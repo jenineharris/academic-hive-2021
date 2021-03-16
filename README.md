@@ -71,7 +71,12 @@ If you would like to view the slides separately, they are available here: https:
 Other places to get more instruction or information on R:
 
 <ul>
-  <li>  
-  <li> 
-  <li>  
+  <li> https://swirlstats.com
+  <li> https://tinystats.github.io/teacups-giraffes-and-statistics/index.html
+  <li> https://github.com/Joscelinrocha/Learning-R-resources/wiki#wiki-pages-box
+  <li> Check out the #rstats hashtag on Twitter and follow the people who tweet about #rstats 
+  <li> https://community.rstudio.com
+  <li> ...and so many more!
 </ul>
+
+
