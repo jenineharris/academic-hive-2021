@@ -57,13 +57,13 @@ First, download the participant files and save them together in the same folder 
   <li> Unzip the downloaded zip file and save all the files in a single folder on your computer 
 </ul>
 
-Second, watch and follow along with this video: https://youtu.be/iTY49RJUhXw
+Second, watch and follow along with this video: https://youtu.be/gSuZHoOenQ8
 
-If you would like to view the slides separately, they are available here: https://jenineharris.github.io/AHslides/
+If you would like to view the slides from the video separately, they are available here: https://jenineharris.github.io/AHslides/
 
 ### Step 4: Coding Part 2 - Create basic tables and figures in R
 
-Watch and follow along with this video: https://youtu.be/TADNOby3Eo4
+Watch and follow along with this video: https://youtu.be/z7Q0ean-Q4w
 
 If you would like to view the slides separately, they are available here: https://jenineharris.github.io/AHslides/viz.html
 
