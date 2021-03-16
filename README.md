@@ -45,7 +45,7 @@ Second, download and install R Studio:
 
 ### Step 2: Learn about the features of R Studio 
 
-Watch a short introduction to the <a href = "https://youtu.be/G3mnVRPaUKE">R Studio Interface</a>.
+Watch a short introduction to the <a href = "https://youtu.be/6bZGlHmssPI">R Studio Interface</a>.
 
 ### Step 3: Coding Part 1 - Import and clean data in R
 
