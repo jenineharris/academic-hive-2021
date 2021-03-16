@@ -1,7 +1,7 @@
-<img src = "https://academichive.com/wp-content/uploads/2017/01/HIVE-001-300x142.png" align = "left"> 
-
-# 2021 Research Bootcamp
+<img src = "https://academichive.com/wp-content/uploads/2017/01/HIVE-001-300x142.png" align = "center"> 
 <br><br>
+# 2021 Research Bootcamp
+
 ## Getting Started in R Workshop Instructions
 
 
