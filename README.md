@@ -47,7 +47,7 @@ Second, download and install R Studio:
 
 Watch a short introduction to the <a href = "https://youtu.be/6bZGlHmssPI">R Studio Interface</a>.
 
-### Step 3: Coding Part 1 - Import and clean data in R
+### Step 3: Coding Part 1 - Importing and cleaning data in R
 
 First, download the participant files and save them together in the same folder on your computer:
 
@@ -61,7 +61,7 @@ Second, watch and follow along with this video: https://youtu.be/gSuZHoOenQ8
 
 If you would like to view the slides from the video separately, they are available here: https://jenineharris.github.io/AHslides/
 
-### Step 4: Coding Part 2 - Create basic tables and figures in R
+### Step 4: Coding Part 2 - Creating basic tables and figures in R
 
 Watch and follow along with this video: https://youtu.be/z7Q0ean-Q4w
 
