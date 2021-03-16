@@ -57,9 +57,7 @@ First, download the participant files and save them together in the same folder 
   <li> Unzip the downloaded zip file and save all the files in a single folder on your computer 
 </ul>
 
-Second, watch and follow along with this video: 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6bZGlHmssPI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Second, watch and follow along with this video: https://youtu.be/gSuZHoOenQ8
 
 If you would like to view the slides from the video separately, they are available here: https://jenineharris.github.io/AHslides/
 
