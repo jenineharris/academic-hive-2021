@@ -68,7 +68,7 @@ If you would like to view the slides separately, they are available here: https:
 
 ### Certificate of participation
 
-If you were registered for the Academic Hive Bootcame 2021 and would like a certificate of participation for the R workshop, submit your completed participant files and your name by April 2, 2021 through <a href = "https://forms.gle/TXdtNhDmZxfKgJFSA">this form</a>.
+If you were registered for the Academic Hive Bootcamp in March 2021 and would like a certificate of participation for the work you did in the R workshop, submit your completed participant files and your name and email address by April 2, 2021 through <a href = "https://forms.gle/TXdtNhDmZxfKgJFSA">this form</a>. The Academic Hive team will email you a certificate for your hard work.
 
 ### R Resources
 
