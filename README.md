@@ -66,6 +66,10 @@ Watch and follow along with this video: https://youtu.be/z7Q0ean-Q4w
 
 If you would like to view the slides separately, they are available here: https://jenineharris.github.io/AHslides/viz.html
 
+### Certificate of completion
+
+If you were registered for the Academic Hive Bootcame 2021 and would like a certificate of completion for the R workshop, submit your completed participant files and your name by April 2, 2021 through <a href = "https://forms.gle/TXdtNhDmZxfKgJFSA">this form</a>.
+
 ### R Resources
 
 Other places to get more instruction or information on R:
